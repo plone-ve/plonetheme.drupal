@@ -1,54 +1,80 @@
-===============================================
+=================
 plonetheme.drupal
-===============================================
+=================
 
-.. contents:: Table of Contents
-   :depth: 2
 
 Overview
---------
+========
 
-plonetheme.drupal is an installable Plone Theme using `plone.app.theming`_, based on 
-the default Sunburst Plone theme.
+``plonetheme.drupal`` is an installable Plone Theme using `plone.app.theming`_, 
+based on the default Plone `Sunburst Theme`_.
 
-Strongly inspired by the Drupal theme `Bartik`_ (default theme in Drupal 7), this theme may help sell Plone to PHP guys ;)
+Strongly inspired by the Drupal theme `Bartik`_ (default theme in Drupal 7), 
+this theme may help sell Plone to PHP guys ;)
 
 **To be installed before any demonstration to an audience of Drupal followers ;) !**
 
-Do you want to learn more about Plone versus Drupal ? Install this theme and visit *http://<your-plone-site>/@@plone-versus-drupal*
 
 Requirements
-------------
+============
 
-    * I have tested this release with Plone 4.3a1, Plone 4.2.1.1 and Plone 4.1.6 (http://plone.org/products/plone).
-    
-    * For Plone 4.1.6 : plone.app.theming 1.0 (please configure your buildout corresponding to `plone.app.theming installation`_)
+- Tested with the following releases: *Plone 4.3 latest version*, *Plone 4.3a1*, *Plone 4.2.1.1* and *Plone 4.1.6* (https://plone.org/download).
+
+- For Plone 4.1.6 : ``plone.app.theming`` 1.0 (please configure your buildout corresponding to `plone.app.theming 1.0 installation`_)
+
 
 Screenshot
-------------
+==========
 
-.. image:: https://github.com/sylvainb/plonetheme.drupal/raw/master/docs/plonetheme-drupal-screenshot.png
+.. figure:: https://github.com/sylvainb/plonetheme.drupal/raw/master/docs/plonetheme-drupal-screenshot.png
    :height: 1039px
    :width: 1026px
    :scale: 70 %
    :alt: Plone Theme Drupal Screenshot
    :align: center
 
+  Plone Theme Drupal Screenshot
+
+
+Plone versus Drupal
+-------------------
+
+Do you want to learn more about Plone versus Drupal? Install this theme and visit 
+
+	*http://<your-plone-site>/@@plone-versus-drupal*
+
+.. figure:: https://github.com/sylvainb/plonetheme.drupal/raw/master/docs/plonetheme-drupal-versus-plone.png
+   :height: 1039px
+   :width: 1026px
+   :scale: 70 %
+   :alt: Post about Plone versus Drupal Screenshot
+   :align: center
+
+  Post about Plone versus Drupal Screenshot
+
+
 Installation
-------------
+============
+
 
 Getting the theme
-~~~~~~~~~~~~~~~~~~~~
+-----------------
 
-Add ``plonetheme.drupal`` to your ``plone.recipe.zope2instance`` buildout section's *eggs* parameter e.g.::
+If you are a **developer user**, you might enjoy installing it via buildout.
 
-    [instance]
+For install ``plonetheme.drupal`` package add it to your ``buildout`` section's 
+*eggs* parameter e.g.: ::
+
+   [buildout]
+    ...
     eggs =
-        Plone
         ...
         plonetheme.drupal
 
-Or, you can add it as a dependency on your own product *setup.py*::
+
+and then running ``bin/buildout``.
+
+Or, you can add it as a dependency on your own product ``setup.py`` file: ::
 
     install_requires=[
         ...
@@ -56,20 +82,23 @@ Or, you can add it as a dependency on your own product *setup.py*::
     ],
 
 Enabling the theme
-~~~~~~~~~~~~~~~~~~~~
+------------------
 
     Install the theme from the Add-ons control panel. That's it!
 
-Quickly test ?
-~~~~~~~~~~~~~~~~~~~~
 
-Download plonetheme.drupal and use virtualenv and buildout to test the theme::
+Quickly test?
+--------------
 
-    easy_install virtualenv
+Download plonetheme.drupal and use virtualenv and buildout to test the theme:
+
+::
+
+    pip install virtualenv
     cd plonetheme.drupal
     virtualenv .
     source bin/activate
-    (plonetheme.drupal) easy_install zc.buildout 
+    (plonetheme.drupal) pip install zc.buildout 
     !!! check the buildout config file ``test-plone-base.cfg`` before running !!!
     (plonetheme.drupal) ln -s test-plone-4.2.x.cfg buildout.cfg 
     (plonetheme.drupal) python bootstrap.py
@@ -77,7 +106,7 @@ Download plonetheme.drupal and use virtualenv and buildout to test the theme::
     [...] be patient... [...]
     (plonetheme.drupal) ./bin/instance fg
 
-Go to http://localhost:8080, add a new Plone Site and install plonetheme.drupal
+Go to http://localhost:8080, add a new Plone Site and install ``plonetheme.drupal`` package.
 
 Launch tests::
 
@@ -89,25 +118,40 @@ Launch code coverage::
     (plonetheme.drupal) bin/report
     And open with a browser htmlcov/index.html
 
-Credits
--------
 
-    * Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.asilax.fr/>`_
+Contribute
+==========
+
+- Issue Tracker: https://github.com/sylvainb/plonetheme.drupal/issues
+- Source Code: https://github.com/sylvainb/plonetheme.drupal
 
 
-Source code
------------
-
-`Source code <https://github.com/sylvainb/plonetheme.drupal>`_ is hosted on Github.
-
-How to contribute and submit a patch ?
+How to contribute and submit a patch?
 --------------------------------------
 
 `Source code <https://github.com/sylvainb/plonetheme.drupal>`_ and an `issue tracker <https://github.com/sylvainb/plonetheme.drupal/issues>`_ is hosted on Github.
 
 
+License
+=======
 
-.. _`plone.app.theming`: http://pypi.python.org/pypi/plone.app.theming
-.. _`plone.app.theming installation`: http://pypi.python.org/pypi/plone.app.theming/1.0#installation
+This package is licensed under the GPL Version 2.
+
+
+Credits
+=======
+
+- Sylvain Boureliou [sylvainb] - `GitHub <https://github.com/sylvainb>`_ - `Website <http://www.asilax.fr/>`_
+
+
+Amazing contributions
+---------------------
+
+- Leonardo J. Caballero G. aka macagua (leonardocaballero at gmail dot com).
+
+You can find an updated list of package contributors on https://github.com/sylvainb/plonetheme.drupal/contributors
+
+.. _`Sunburst Theme`: https://github.com/plone/plonetheme.sunburst
+.. _`plone.app.theming`: https://pypi.org/project/plone.app.theming
+.. _`plone.app.theming 1.0 installation`: https://pypi.org/project/plone.app.theming/1.0#installation
 .. _`Bartik`: https://drupal.org/documentation/themes/bartik
-
