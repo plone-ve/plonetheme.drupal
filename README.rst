@@ -41,7 +41,7 @@ Plone versus Drupal
 
 Do you want to learn more about Plone versus Drupal? Install this theme and visit 
 
-	*http://<your-plone-site>/@@plone-versus-drupal*
+	*http://site_url/your_plone_site/@@plone-versus-drupal*
 
 .. figure:: https://github.com/sylvainb/plonetheme.drupal/raw/master/docs/plonetheme-drupal-versus-plone.png
    :height: 1039px
